@@ -1,0 +1,81 @@
+.div-border {
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+.main__from {
+  padding: 20px;
+}
+.main__from div:not(:first-child) {
+  padding: 20px;
+}
+.main__nickname > input {
+  width: 60%;
+}
+.main__post {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+}
+.main__post__info {
+  display: flex;
+  padding-right: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.main__post__subfrom {
+  margin-top: 5px;
+  padding: 10px 0px 10px 20px;
+  background-color: rgba(0,0,255,0.1);
+}
+.main__subpost {
+  position: relative;
+  margin-top: 5px;
+  padding: 10px 0px 10px 20px;
+  background-color: rgba(0,0,255,0.1);
+}
+.main__subpost--self {
+  background-color: rgba(0,255,255,0.1);
+}
+.main__subpost__info {
+  display: flex;
+  padding-right: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.main__pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main__pages--btn {
+  margin: 10px 5px;
+}
+.wt-100 {
+  width: 100%;
+}
+.wt-90 {
+  width: 90%;
+}
+.haveNavbar {
+  margin-top: 80px;
+}
+.magin-10 {
+  margin: 10px;
+}
+.magin-top-10 {
+  margin-top: 10px;
+}
+.magin-bot-10 {
+  margin-bottom: 10px;
+}
+.postAction__del {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+}
+.postAction__del--sub {
+  top: 50px;
+  right: 10px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=dervice-width,initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		.item--done{
+			background-color: #95F395;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<title>代辦事項</title>
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col">
+				<h2 class="text-center">代辦事項</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-3">
+			<div class="col-6">
+				<div class="card">
+					<div class="card-header">
+						<div class="input-group">
+							<input type="text" id="userInput" class="form-control" placeholder="輸入代辦事項" aria-label="輸入代辦事項" aria-describedby="basic-addon1">
+							<div class="input-group-prepend">
+								<button class="btn btn-outline-success" id="items--add" type="button">確認</button>
+							</div>
+						</div>
+					</div>
+					<ul class="items list-group list-group-flush"></ul>
+					<div class="card-footer">
+						<ul class="nav nav-pills card-header-pills">
+							<li class="nav-item">
+								<a class="itmes--showtype nav-link active" href="#" value="all">全部</a>
+							</li>
+							<li class="nav-item">
+								<a class="itmes--showtype nav-link" href="#" value="done">已完成</a>
+							</li>
+							<li class="nav-item">
+								<a class="itmes--showtype nav-link" href="#" value="undone">未完成</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

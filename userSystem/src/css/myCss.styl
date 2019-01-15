@@ -1,0 +1,109 @@
+.div-border {
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+}
+
+.main{
+	&__from {
+		padding: 20px;
+	}
+
+	&__from div:not(:first-child){
+		padding: 20px;
+	}
+
+	&__nickname > input {
+		width: 60%;
+	}
+
+	&__post {
+		position: relative;
+		margin-top: 20px;
+		padding: 20px;
+
+		&__info {
+			display: flex;
+			padding-right: 10px;
+			justify-content: space-between;
+			margin-bottom: 10px; 
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		&__subfrom {
+			margin-top: 5px;
+			padding: 10px 0px 10px 20px; 
+			background-color: rgba(0, 0, 255, 0.1);
+		}
+	}
+
+	&__subpost {
+		position: relative;
+		margin-top: 5px;
+		padding: 10px 0px 10px 20px; 
+		background-color: rgba(0, 0, 255, 0.1);
+
+		&--self {
+			background-color: rgba(0, 255, 255, 0.1);
+		}
+
+		&__info {
+			display: flex;
+			padding-right: 10px;
+			justify-content: space-between;
+			margin-bottom: 10px; 
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	&__pages {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		&--btn {
+			margin: 10px 5px;
+		}
+	}
+}
+
+.wt {
+	&-100{
+		width: 100%;
+	}
+	&-90{
+		width: 90%;
+	}
+}
+
+.haveNavbar {
+	margin-top: 80px;
+}
+
+.magin{
+	&-10{
+		margin: 10px;
+	}
+
+	&-top{
+		&-10{
+			margin-top: 10px;
+		}
+	}
+
+	&-bot{
+		&-10{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.postAction{
+	&__del {
+		position: absolute;
+		top: 60px;
+		right: 25px;
+		&--sub {
+			top: 50px;
+			right: 10px;
+		}
+	}
+}
