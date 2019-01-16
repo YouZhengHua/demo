@@ -81,7 +81,7 @@
 						<thead>
 							<tr class="align-middle">
 								<th scope="col">#</th>
-								<th scope="col">訂購者</th>
+								<!-- <th scope="col">訂購者</th> -->
 								<th scope="col" class="text-center">下單日期及時間</th>
 								<th scope="col" class="text-right">訂單金額</th>
 								<th scope="col"></th>
@@ -96,7 +96,7 @@
 							?>
 							<tr class="orderList--dataRow">
 								<th scope="row"><?php echo $index++; ?></th>
-								<td><?php echo $resultRow['nickname']; ?></td>
+								<!-- <td><?php echo $resultRow['nickname']; ?></td> -->
 								<td class="text-center"><?php echo $resultRow['order_date']; ?></td>
 								<td class="text-right"><?php echo $resultRow['order_total']; ?></td>
 								<td class="text-center"><button class="btn--showOrderDetail btn btn-sm btn-outline-info" data-orderId="<?php echo $resultRow['id']; ?>">顯示明細</button></td>
