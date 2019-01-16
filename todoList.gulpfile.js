@@ -33,6 +33,7 @@ function bulid__JS(cb){
 const bulidTodoList = gulp.series(clean, bulid__HTML, bulid__JS);
 
 gulp.task('bulid', bulidTodoList);
+gulp.task('clean', gulp.series(clean));
 
 exports.bulid = bulidTodoList;
 exports.clean = gulp.series(clean);

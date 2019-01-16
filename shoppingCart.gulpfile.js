@@ -33,6 +33,7 @@ function bulid__JS(cb){
 const bulidShoppingCart = gulp.series(clean, bulid__HTML, bulid__JS);
 
 gulp.task('bulid', bulidShoppingCart);
+gulp.task('clean', gulp.series(clean));
 
 exports.bulid = bulidShoppingCart;
 exports.clean = gulp.series(clean);

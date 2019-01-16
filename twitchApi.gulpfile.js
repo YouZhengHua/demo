@@ -55,6 +55,7 @@ function bulid__img(cb){
 const bulidTwitchApi = gulp.series(clean, bulid__HTML, bulid__JS, bulid__Css, bulid__img);
 
 gulp.task('bulid', bulidTwitchApi);
+gulp.task('clean', gulp.series(clean));
 
 exports.bulid = bulidTwitchApi;
 exports.clean = gulp.series(clean);

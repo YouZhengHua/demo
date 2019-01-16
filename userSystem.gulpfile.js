@@ -49,6 +49,7 @@ function bulid__Css(cb){
 const bulidUserSystem = gulp.series(clean, bulid__HTML, bulid__JS, bulid__Css);
 
 gulp.task('bulid', bulidUserSystem);
+gulp.task('clean', gulp.series(clean));
 
 exports.bulid = bulidUserSystem;
 exports.clean = gulp.series(clean);
