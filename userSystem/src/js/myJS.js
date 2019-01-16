@@ -1,3 +1,16 @@
+function escapeHtml(text) {
+	var map = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&#039;'
+	};
+
+	return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+}
+
+
 /**
 	顯示編輯留言
 **/
@@ -44,29 +57,29 @@ function addSubComments(element){
 				<div class="main__subpost main__subpost--self">
 					<div class="main__subpost__info">
 						<div class="main__subpost__info--name">
-							${res[0].crt_user}
+							${escapeHtml(res[0].crt_user)}
 						</div>
 						<div class="main__subpost__info-time">
-							${res[0].crt_time}
+							${escapeHtml(res[0].crt_time)}
 						</div>
 					</div>
 					<div class="main__subpost__comment--text">
-						${res[0].contnet}
+						${escapeHtml(res[0].contnet)}
 					</div>
 					<div class="postAction">
 						<div class="postAction__edit">
 							<form action="edit_comments.php" method="POST">
 								<div class="margin-bot-10">
-									<textarea class="postAction__textarea wt-90" name="contnet" placeholder="留言內容" style="display: none;">${res[0].contnet}</textarea>
+									<textarea class="postAction__textarea wt-90" name="contnet" placeholder="留言內容" style="display: none;">${escapeHtml(res[0].contnet)}</textarea>
 								</div>
-								<input type="hidden" name="commentId" value="${res[0].id}">
+								<input type="hidden" name="commentId" value="${escapeHtml(res[0].id)}">
 								<button type="submit" class="btn postAction__edit--submit" style="display: none;">送出</button>
 								<button type="button" class="btn postAction__edit--cancel" style="display: none;">取消</button>
 								<button type="button" class="btn postAction__edit--show" value="edit">編輯</button>
 							</form>
 						</div>
 						<div class="postAction__del postAction__del--sub">
-							<input type="hidden" name="commentId" value="${res[0].id}">
+							<input type="hidden" name="commentId" value="${escapeHtml(res[0].id)}">
 							<button class="btn postAction__del--submit" value="del">刪除</button>
 						</div>
 					</div>
@@ -101,35 +114,35 @@ function addMainComments(element){
 					<div class="main__post col div-border">
 						<div class="main__post__info">
 							<div class="main__post__info--name">
-								${res[0].crt_user}
+								${escapeHtml(res[0].crt_user)}
 							</div>
 							<div class="main__post__info-time">
-								${res[0].crt_time}
+								${escapeHtml(res[0].crt_time)}
 							</div>
 						</div>
 						<div class="main__post__comment--text">
-							${res[0].contnet}
+							${escapeHtml(res[0].contnet)}
 						</div>
 							<div class="postAction">
 								<div class="postAction__edit wt-90">
 									<form action="edit_comments.php" method="POST">
 										<div class="margin-bot-10">
-											<textarea class="postAction__textarea wt-100" name="contnet" placeholder="留言內容" style="display: none;">${res[0].contnet}</textarea>
+											<textarea class="postAction__textarea wt-100" name="contnet" placeholder="留言內容" style="display: none;">${escapeHtml(res[0].contnet)}</textarea>
 										</div>
-										<input type="hidden" name="commentId" value="${res[0].id}">
+										<input type="hidden" name="commentId" value="${escapeHtml(res[0].id)}">
 										<button type="submit" class="btn postAction__edit--submit" style="display: none;">送出</button>
 										<button type="button" class="btn postAction__edit--cancel" style="display: none;">取消</button>
 										<button type="button" class="btn postAction__edit--show" value="edit">編輯</button>
 									</form>
 								</div>
 								<div class="postAction__del">
-									<input type="hidden" name="commentId" value="${res[0].id}">
+									<input type="hidden" name="commentId" value="${escapeHtml(res[0].id)}">
 									<button class="btn postAction__del--submit" value="del">刪除</button>
 								</div>
 							</div>
 						<div class="main__post__subfrom" style="display: none;">
 							<div class="main__post__subfrom--nickname">
-								${res[0].crt_user}
+								${escapeHtml(res[0].crt_user)}
 							</div>
 							<div>
 								<textarea class="main__post__subfrom--textarea wt-90 margin-bot-10" name="contnet" placeholder="留言內容"></textarea>
@@ -137,7 +150,7 @@ function addMainComments(element){
 							<div>
 								<input class="btn btn-primary btn-lg" type="button" value="送出">
 							</div>
-							<input type="hidden" name="parentId" value="${res[0].id}">
+							<input type="hidden" name="parentId" value="${escapeHtml(res[0].id)}">
 						</div>
 						<div class="margin-top-10">
 							<input class="btn btn-primary subfromFrom--show" type="button" value="我要留言">
